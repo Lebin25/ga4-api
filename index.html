@@ -14,12 +14,12 @@
     <main>
         <p>This is a placeholder website for testing purposes.</p>
         <p>By Bin</p>
-        <a href="#" onclick="ga('send', 'pageview', '/home')">Home</a>
-        <a href="#" onclick="ga('send', 'pageview', '/about')">About</a>
-        <a href="#" onclick="ga('send', 'pageview', '/contact')">Contact</a>
-        <button onclick="ga('send', 'event', 'button', 'click', 'download')">Download</button>
-        <form onsubmit="ga('send', 'event', 'form', 'submit', 'contact')">...</form>
-        <video onplay="ga('send', 'event', 'video', 'play', 'promo')">...</video>
+        <a href="#" onclick="gtag('event', 'page_view', { 'event_category': 'Navigation', 'event_label': 'Home' });">Home</a>
+        <a href="#" onclick="gtag('event', 'page_view', { 'event_category': 'Navigation', 'event_label': 'About' });">About</a>
+        <a href="#" onclick="gtag('event', 'page_view', { 'event_category': 'Navigation', 'event_label': 'Contact' });">Contact</a>
+        <button onclick="gtag('event', 'download', { 'event_category': 'Button', 'event_label': 'Download' });">Download</button>
+        <form onsubmit="gtag('event', 'submit', { 'event_category': 'Form', 'event_label': 'Contact' });">...</form>
+        <video onplay="gtag('event', 'play', { 'event_category': 'Video', 'event_label': 'Promo' });">...</video>
     </main>
     <footer>
         <p>&copy; 2024 Placeholder Website</p>
@@ -30,5 +30,5 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-YDDTQD21FG');
-  </script>
+</script>
 </html>
